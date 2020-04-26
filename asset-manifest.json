@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dd885281.chunk.css",
+    "main.js": "/static/js/main.d28ca78e.chunk.js",
+    "main.js.map": "/static/js/main.d28ca78e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2989194e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2989194e.js.map",
+    "static/js/2.e368fee0.chunk.js": "/static/js/2.e368fee0.chunk.js",
+    "static/js/2.e368fee0.chunk.js.map": "/static/js/2.e368fee0.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.263829ab7867030a639d887ce6e0e1b2.js": "/precache-manifest.263829ab7867030a639d887ce6e0e1b2.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.dd885281.chunk.css.map": "/static/css/main.dd885281.chunk.css.map",
+    "static/js/2.e368fee0.chunk.js.LICENSE.txt": "/static/js/2.e368fee0.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/A Goblin Appears.4c9c1f1e.otf",
+    "static/media/boilwater.png": "/static/media/boilwater.ab3faa69.png",
+    "static/media/vegan_icon.png": "/static/media/vegan_icon.76ce43e2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2989194e.js",
+    "static/js/2.e368fee0.chunk.js",
+    "static/css/main.dd885281.chunk.css",
+    "static/js/main.d28ca78e.chunk.js"
+  ]
+}
