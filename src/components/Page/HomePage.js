@@ -8,7 +8,7 @@ const HomePage = (props) => {
     <div className="login-hero">
       <div style={{ marginBottom: 60 }}>
         <h1 className="goblin-text" style={{ textAlign: "center" }}>
-          8 Bit Byte HOST
+          8 Bit Byte
         </h1>
         <h3 className="goblin-text" style={{ textAlign: "center" }}>
           Cook a bit -> Eat a bite.
