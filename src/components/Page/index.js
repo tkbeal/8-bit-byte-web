@@ -1,11 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import Page from "./Page";
+import Load from "./LoadingPage";
+import Diet from "./DietaryPage";
+import Login from "./LoginPage";
+import Register from "./RegisterPage";
 import Home from "./HomePage";
 import Map from "../WorldMap/";
-import ByteButton from "../ByteButton";
-import { Link } from "react-router-dom";
-import Diet from "./DietaryPage";
-import Recipe from "../Recipe"
+import Recipe from "../Recipe";
+import About from "./AboutPage";
+import Contact from "./ContactPage";
 
 const LoginPage = () => {
   return (
@@ -15,24 +20,7 @@ const LoginPage = () => {
       backgroundColor="#f2ecec"
     >
       <div className="page-content-container">
-        <ByteButton
-          label="Login"
-          backgroundColor="#efc326"
-          textColor="white"
-          to="/map"
-        />
-        <p>
-          Don't have an account?{" "}
-          <Link to="/register" style={{ color: "#efc326" }}>
-            Sign Up!
-          </Link>
-        </p>
-        <p>
-          Forgot your password/username?{" "}
-          <Link to="#" style={{ color: "#efc326" }}>
-            Click Here!
-          </Link>
-        </p>
+        <Login />
       </div>
     </Page>
   );
@@ -46,21 +34,28 @@ const RegisterPage = () => {
       backgroundColor="#f2ecec"
     >
       <div className="page-content-container">
-        <ByteButton
-          label="Register"
-          backgroundColor="#efc326"
-          textColor="white"
-          to="/dietary-preferences"
-        />
-        <p>
-          Already have an account?{" "}
-          <Link to="/login" style={{ color: "#efc326" }}>
-            Login!
-          </Link>
-        </p>
+        <Register />
       </div>
     </Page>
   );
+};
+
+const DietaryPage = () => {
+  return (
+    <Page
+      title="Dietary Preferences"
+      subtitle="Choose dietary preferences"
+      backgroundColor="#FFD953"
+    >
+      <div className="page-content-container">
+        <Diet />
+      </div>
+    </Page>
+  );
+};
+
+const LoadingPage = () => {
+  return <Load />;
 };
 
 const MapPage = () => {
@@ -77,29 +72,25 @@ const MapPage = () => {
   );
 };
 
-const DietaryPage = () => {
+const RecipeSelectionPage = () => {
   return (
-    <Diet
-      title="Dietary Preferences"
-      subtitle="Choose dietary preferences"
-      backgroundColor="#FFD953"
-    />
-  );
-};
-
-const RecipePage = () => {
-  return (
-    <Page
-      title="Beginner Recipe "
-      subtitle= "Asian Cuisine" //change later to props
-      backgroundColor="#f2ecec"
-    >
+    <Page noTitle backgroundColor="#f2ecec">
       <div className="page-content-container">
-        <Recipe/>
+        <Recipe />
       </div>
     </Page>
   );
 };
 
-export { Home as HomePage, LoginPage, RegisterPage, MapPage, DietaryPage, RecipePage };
+export {
+  Home as HomePage,
+  LoginPage,
+  RegisterPage,
+  DietaryPage,
+  LoadingPage,
+  MapPage,
+  RecipeSelectionPage,
+  About as AboutPage,
+  Contact as ContactPage,
+};
 export default Page;

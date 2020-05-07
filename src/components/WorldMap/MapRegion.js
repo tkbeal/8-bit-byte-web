@@ -1,14 +1,14 @@
 import React from "react";
 import "./map.css";
+import { Link } from "react-router-dom";
 
-const MapRegion = (props) => {
-  let { name, description, src } = props;
+const MapRegion = ({ name, description, src, cuisine }) => {
   return (
-    <div className="map-region-container">
+    <Link to={`/recipe/${cuisine}`} className="map-region-container">
       <div className="map-region-inner-container">
         <img
           className="region-image"
-          src={require(`../../assets/map/${src}`)}
+          src={require(`../../assets/images/map-outlines/${src}`)}
           alt="outline of region"
         />
       </div>
@@ -27,7 +27,7 @@ const MapRegion = (props) => {
           })}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
