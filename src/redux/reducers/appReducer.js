@@ -24,7 +24,7 @@ const initialState = {
       glutenfree: false,
     },
     xp: 0,
-    recipes: 0,
+    recipes: [],
   },
 };
 
@@ -52,7 +52,6 @@ let reducers = (state = initialState, action) => {
     case CHANGE_ACTIVE_PAGE:
       return { ...state, activePage: action.payload };
     case CHANGE_DIETARY_PREFERENCE:
-      console.log(state.user.preferences);
       return {
         ...state,
         user: {
@@ -64,13 +63,18 @@ let reducers = (state = initialState, action) => {
         },
       };
     case USER_COMPLETED_RECIPE:
-      return {
-        ...state,
-        user: {
-          ...state.user,
-          recipes: state.user.recipes + 1,
-        },
-      };
+      if (!state.user.recipes.includes(action.payload)) {
+        return {
+          ...state,
+          user: {
+            ...state.user,
+            recipes: [...state.user.recipes, action.payload],
+          },
+        };
+      } else {
+        return { ...state };
+      }
+
     case ADD_EXPERIENCE_POINTS:
       return {
         ...state,
