@@ -1,37 +1,58 @@
 .header {
-  background-color: whitesmoke;
+  position: fixed;
+  width: 100%;
+  background-color: var(--shadow-green);
   display: flex;
-  flex-direction: row;
-  padding-left: 20px;
   z-index: 1;
-  height: 65px;
+  height: 69px;
+  padding: 0px 50px 0px 50px;
+  box-sizing: border-box;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .logo-font {
-  font-family: "A Goblin Appears";
-  color: #f4a41b;
+  font-size: 1.6rem;
 }
 .navbar {
   display: flex;
+  flex-basis: 100%;
+  justify-content: flex-end;
   align-items: center;
-}
-
-.navbar .navlink:first-child {
-  margin-left: 30px;
 }
 
 .navlink {
   margin: 10px;
   text-decoration: none;
   font-weight: bolder;
-  color: var(--byte-grey);
-  font-family: "A Goblin Appears";
-  font-size: 0.8rem;
+  font-family: "Arial";
+  font-size: 1rem;
+  font-weight: normal;
+  color: white;
+}
+
+.navlink-selected {
+  color: var(--byte-orange);
 }
 
 .navlink:hover {
   color: var(--byte-orange);
 }
 
-.navlink-selected {
-  color: orange;
+.navlink-line {
+  background-color: white;
+  height: 2px;
+  width: 0%;
+  margin: auto;
+  margin-top: 2px;
+  transition: 0.25s ease-in-out;
+}
+
+.navlink:hover > .navlink-line {
+  width: 80%;
+}
+.navlink-selected > .navlink-line {
+  width: 80%;
 }

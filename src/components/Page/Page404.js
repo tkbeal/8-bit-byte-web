@@ -1,6 +1,6 @@
 import React from "react";
 import ByteButton from "../ByteButton";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 import { getAction } from "../../redux/reducers";
 import { CHANGE_ACTIVE_PAGE } from "../../redux/actionTypes";
 
@@ -29,10 +29,4 @@ const Page404 = ({ changeActive }) => {
   );
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    changeActive: (page) => dispatch(getAction(CHANGE_ACTIVE_PAGE, page)),
-  };
-};
-
-export default connect(null, mapDispatchToProps)(Page404);
+export default Page404;

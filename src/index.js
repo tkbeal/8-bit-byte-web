@@ -1,15 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { createStore } from "redux";
 import "./index.css";
 import App from "./App";
-import reducers from "./redux/reducers";
-// import * as serviceWorker from "./serviceWorker";
-const store = createStore(reducers);
+import firebase from "firebase/app";
+import "firebase/database";
+import FirebaseConfig from "./firebaseConfig";
+
+firebase.initializeApp(FirebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App store={store} />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

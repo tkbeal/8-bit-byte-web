@@ -1,2 +1,2 @@
-import ProfileDropdown from './Profile';
-export default ProfileDropdown;
+import ProjectDropdown from "./ProjectDropdown";
+export default ProjectDropdown;

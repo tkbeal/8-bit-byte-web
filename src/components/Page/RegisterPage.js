@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 import { getAction } from "../../redux/reducers";
 import { USER_LOGGED_IN, CHANGE_ACTIVE_PAGE } from "../../redux/actionTypes";
 import ByteButton from "../ByteButton";
@@ -12,7 +12,7 @@ class RegisterPage extends React.Component {
     this.state = {
       username: "",
       email: "",
-      password: "",
+      password: ""
     };
     this.changeUsername = this.changeUsername.bind(this);
     this.changePassword = this.changePassword.bind(this);
@@ -40,7 +40,7 @@ class RegisterPage extends React.Component {
           style={{
             textAlign: "center",
             fontWeight: "lighter",
-            lineHeight: 1.5,
+            lineHeight: 1.5
           }}
         >
           Get ready for a cooking adventure!
@@ -52,7 +52,7 @@ class RegisterPage extends React.Component {
             type="text"
             placeholder="Pick something cool"
             name="username"
-            onChange={(e) => this.changeUsername(e.target.value)}
+            onChange={e => this.changeUsername(e.target.value)}
             value={username}
           />
           <label>Email:</label>
@@ -61,7 +61,7 @@ class RegisterPage extends React.Component {
             type="text"
             placeholder="yourname@email.com"
             name="email"
-            onChange={(e) => this.changeEmail(e.target.value)}
+            onChange={e => this.changeEmail(e.target.value)}
             value={email}
           />
           <label>Password:</label>
@@ -70,7 +70,7 @@ class RegisterPage extends React.Component {
             type="password"
             placeholder="s3c4etPv$$w0rd"
             name="text"
-            onChange={(e) => this.changePassword(e.target.value)}
+            onChange={e => this.changePassword(e.target.value)}
             value={password}
           />
         </form>
@@ -99,20 +99,20 @@ class RegisterPage extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    loggedIn: state.loggedIn,
+    loggedIn: state.loggedIn
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    login: (name) => {
+    login: name => {
       dispatch(getAction(USER_LOGGED_IN, name));
     },
-    changeActivePage: (page) => {
+    changeActivePage: page => {
       dispatch(getAction(CHANGE_ACTIVE_PAGE, page));
-    },
+    }
   };
 };
 

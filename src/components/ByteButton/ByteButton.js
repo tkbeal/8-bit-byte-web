@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./link.css";
 
-const ByteButton = (props) => {
+const ByteButton = props => {
   let { backgroundColor, textColor, to } = props;
   return (
-    <Link
+    <NavLink
       to={to}
       className="byte-button"
       style={{ backgroundColor: backgroundColor, color: textColor }}
@@ -14,7 +14,7 @@ const ByteButton = (props) => {
       }}
     >
       {props.label}
-    </Link>
+    </NavLink>
   );
 };
 

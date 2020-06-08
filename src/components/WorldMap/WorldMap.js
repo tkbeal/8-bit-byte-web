@@ -1,5 +1,5 @@
 import React from "react";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 import MapRegion from "./MapRegion";
 import regions from "../../data/regions";
 import "./map.css";
@@ -24,9 +24,9 @@ const WorldMap = ({ loggedIn }) => {
   );
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    loggedIn: state.loggedIn,
+    loggedIn: state.loggedIn
   };
 };
 

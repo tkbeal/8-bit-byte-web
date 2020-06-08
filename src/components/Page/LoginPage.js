@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 import { getAction } from "../../redux/reducers";
 import { USER_LOGGED_IN, CHANGE_ACTIVE_PAGE } from "../../redux/actionTypes";
 import ByteButton from "../ByteButton";
@@ -11,7 +11,7 @@ class LoginPage extends React.Component {
     super(props);
     this.state = {
       username: "",
-      password: "",
+      password: ""
     };
     this.changeUsername = this.changeUsername.bind(this);
     this.changePassword = this.changePassword.bind(this);
@@ -35,7 +35,7 @@ class LoginPage extends React.Component {
           style={{
             textAlign: "center",
             fontWeight: "lighter",
-            lineHeight: 1.5,
+            lineHeight: 1.5
           }}
         >
           Welcome back!
@@ -49,7 +49,7 @@ class LoginPage extends React.Component {
             type="text"
             placeholder="johnsmith1234"
             name="username"
-            onChange={(e) => this.changeUsername(e.target.value)}
+            onChange={e => this.changeUsername(e.target.value)}
             value={username}
           />
           <label>Password:</label>
@@ -58,7 +58,7 @@ class LoginPage extends React.Component {
             type="password"
             placeholder="s3c4etPv$$w0rd"
             name="password"
-            onChange={(e) => this.changePassword(e.target.value)}
+            onChange={e => this.changePassword(e.target.value)}
             value={password}
           />
         </form>
@@ -93,20 +93,20 @@ class LoginPage extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    loggedIn: state.loggedIn,
+    loggedIn: state.loggedIn
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    login: (name) => {
+    login: name => {
       dispatch(getAction(USER_LOGGED_IN, name));
     },
-    changeActivePage: (page) => {
+    changeActivePage: page => {
       dispatch(getAction(CHANGE_ACTIVE_PAGE, page));
-    },
+    }
   };
 };
 

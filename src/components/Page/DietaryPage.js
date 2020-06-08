@@ -1,9 +1,9 @@
 import React from "react";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 import { getAction } from "../../redux/reducers";
 import {
   CHANGE_DIETARY_PREFERENCE,
-  CHANGE_ACTIVE_PAGE,
+  CHANGE_ACTIVE_PAGE
 } from "../../redux/actionTypes";
 import DietButton from "../DietButton";
 import ByteButton from "../ByteButton";
@@ -82,21 +82,21 @@ class DietaryPage extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   let user = state.user;
   return {
-    preferences: user.preferences,
+    preferences: user.preferences
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    changeDietaryPref: (pref) => {
+    changeDietaryPref: pref => {
       dispatch(getAction(CHANGE_DIETARY_PREFERENCE, pref));
     },
-    changeActivePage: (page) => {
+    changeActivePage: page => {
       dispatch(getAction(CHANGE_ACTIVE_PAGE, page));
-    },
+    }
   };
 };
 

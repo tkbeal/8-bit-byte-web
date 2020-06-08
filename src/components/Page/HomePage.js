@@ -1,5 +1,5 @@
 import React from "react";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 import { getAction } from "../../redux/reducers";
 import { CHANGE_ACTIVE_PAGE } from "../../redux/actionTypes";
 import ByteLink from "../ByteButton";
@@ -52,19 +52,4 @@ const HomePage = ({ username, loggedIn, changeActivePage }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    username: state.user.name,
-    loggedIn: state.loggedIn,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    changeActivePage: (page) => {
-      dispatch(getAction(CHANGE_ACTIVE_PAGE, page));
-    },
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
+export default HomePage;

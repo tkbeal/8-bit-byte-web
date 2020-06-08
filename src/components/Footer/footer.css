@@ -1,15 +1,13 @@
 .footer {
   grid-area: footer;
-  height: max(10vh, 360px);
+  height: max(10vh, 300px);
   color: var(--byte-grey);
-  background-color: whitesmoke;
-  border-top: 3px solid #777777;
-  box-shadow: inset 0px 3px 5px #00000030;
-  padding: 50px 60px;
+  background-color: var(--shadow-green);
+  padding: 125px 60px 20px 60px;
   box-sizing: border-box;
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .footer-sectionheader-container {
@@ -29,6 +27,20 @@
   max-width: 40%;
   margin-left: 10px;
   margin-top: 5px;
+}
+
+.footer-social-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 100px;
+  max-width: 120px;
+  margin: auto;
+}
+
+.footer-social-links a {
+  color: whitesmoke;
+  text-decoration: none;
 }
 
 .footer-section-links p {
