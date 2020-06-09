@@ -1,34 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
 
-.App {
-  text-align: center;
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 .goblin-text {
   font-family: "A Goblin Appears";
 }
 
-.body {
+main {
   position: relative;
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100vh;
-  background: linear-gradient(180deg, #efc326 0%, #ff5c00 100%);
+  /* background: linear-gradient(180deg, #efc326 0%, #ff5c00 100%); */
+  background-color: #282c34;
 }
 
-.body > .login-hero {
+main > .login-hero {
   color: white;
   display: flex;
   height: 100%;
@@ -37,15 +24,25 @@
   align-items: center;
 }
 
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
 .clicker {
   position: relative;
   background-color: yellowgreen;
   border: none;
-  padding: 0 20px;
+  padding: 0.5rem 20px;
+  margin: 1rem 0px;
   border-radius: 20px;
   box-shadow: 0px 4px rgb(57, 77, 18);
   min-width: 120px;
   outline: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-family: "Oswald", "sans-serif";
 }
 .clicker:hover {
   cursor: pointer;
@@ -62,18 +59,28 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   font-family: "Oswald", "sans-serif";
   color: white;
+  margin: 0.5rem 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  font-family: "Arial";
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 @font-face {

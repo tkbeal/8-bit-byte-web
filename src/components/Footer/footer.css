@@ -2,7 +2,7 @@
   grid-area: footer;
   height: max(10vh, 300px);
   color: var(--byte-grey);
-  background-color: var(--shadow-green);
+  background-color: rgb(29, 29, 29);
   padding: 125px 60px 20px 60px;
   box-sizing: border-box;
   display: flex;

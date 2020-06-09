@@ -11,43 +11,68 @@ import { NavLink, Link } from "react-router-dom";
 import "./header.css";
 
 class Header extends Component {
+  state = {
+    top: true
+  };
+
+  componentDidMount() {
+    window.addEventListener("scroll", () => {
+      let y = window.scrollY;
+      if (y > 20) {
+        if (this.state.top) {
+          // Only set state to false if currently true
+          this.setState({ top: false });
+        }
+      } else {
+        if (!this.state.top) {
+          this.setState({ top: true });
+        }
+      }
+    });
+  }
+
   render() {
+    let { top } = this.state;
     return (
-      <div className="header">
-        <div className="logo">
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <h1 className="logo-font">
-              T<span style={{ color: "yellowgreen" }}>.</span>Kevin
-            </h1>
-          </Link>
+      <div className={top ? "header" : "header header-fixed"}>
+        <div className="container nav-container">
+          <div className="fullnav">
+            <div className="logo">
+              <Link to="/" style={{ textDecoration: "none" }}>
+                <h1 className="logo-font">
+                  T<span style={{ color: "yellowgreen" }}>.</span>Kevin
+                </h1>
+              </Link>
+            </div>
+            <nav className="navbar">
+              <NavLink
+                exact
+                to="/"
+                className="navlink"
+                activeClassName="navlink-selected"
+              >
+                Home
+                <div className="navlink-line"></div>
+              </NavLink>
+              <NavLink
+                to="/about"
+                className="navlink"
+                activeClassName="navlink-selected"
+              >
+                About
+                <div className="navlink-line"></div>
+              </NavLink>
+              <NavLink
+                className="navlink"
+                activeClassName="navlink-selected"
+                to="/contact"
+              >
+                Contact
+                <div className="navlink-line"></div>
+              </NavLink>
+            </nav>
+          </div>
         </div>
-        <nav className="navbar">
-          <NavLink
-            exact
-            to="/"
-            className="navlink"
-            activeClassName="navlink-selected"
-          >
-            Home
-            <div className="navlink-line"></div>
-          </NavLink>
-          <NavLink
-            to="/about"
-            className="navlink"
-            activeClassName="navlink-selected"
-          >
-            About
-            <div className="navlink-line"></div>
-          </NavLink>
-          <NavLink
-            className="navlink"
-            activeClassName="navlink-selected"
-            to="/contact"
-          >
-            Contact
-            <div className="navlink-line"></div>
-          </NavLink>
-        </nav>
       </div>
     );
   }

@@ -17,13 +17,7 @@ const Page404 = ({ changeActive }) => {
         <h3 className="goblin-text" style={{ textAlign: "center" }}>
           This page doesn't exist yet.
         </h3>
-        <ByteButton
-          to="/"
-          label="Back to Home"
-          onClick={() => {
-            changeActive("home");
-          }}
-        />
+        <ByteButton to="/" label="Back to Home" />
       </div>
     </div>
   );
