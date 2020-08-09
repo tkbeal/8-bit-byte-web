@@ -16,7 +16,7 @@ export default class HomePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      clicks: 0
+      clicks: 0,
     };
   }
 
@@ -40,7 +40,7 @@ export default class HomePage extends Component {
 
   getClickData = () => {
     const clicksRef = firebase.database().ref("/clicks");
-    clicksRef.on("value", snap => {
+    clicksRef.on("value", (snap) => {
       let clicks = snap.val();
       this.setState({ clicks });
       // console.log("DATA RETRIEVED");
@@ -60,11 +60,12 @@ export default class HomePage extends Component {
           <h3 style={{ marginTop: 0 }}>Hello, my name is</h3>
           <h1>Kevin Beal</h1>
           <p style={{ color: "white" }}>
-            I'm still working on this site, but please click this button to let
-            me know you came to visit!
+            This will be the home of all my future small projects and portfolio
+            updates. <br /> It's a little empty right now, but please click the
+            FireBase button to let me know you came to visit!
           </p>
           <button className="clicker" onClick={this.handleClick}>
-            Clicks: {clicks}
+            🔥 Clicks: {clicks}
           </button>
           <a href={resume} download="TKB_Resume.pdf" className="download">
             <h4>

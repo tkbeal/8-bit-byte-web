@@ -20,8 +20,10 @@ class Page extends Component {
             : {}
         )}
       >
-        {!noTitle ? <Title title={title} subtitle={subtitle} /> : null}
-        {this.props.children}
+        <div className="page-content-container">
+          {!noTitle ? <Title title={title} subtitle={subtitle} /> : null}
+          {this.props.children}
+        </div>
       </div>
     );
   }

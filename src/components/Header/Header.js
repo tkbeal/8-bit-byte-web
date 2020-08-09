@@ -1,31 +1,29 @@
 import React, { Component } from "react";
 import Profile from "./Profile";
-// import { connect } from "react-redux";
 import { NavLink, Link } from "react-router-dom";
-// import { getAction } from "../../redux/reducers";
-// import {
-//   USER_LOGGED_IN,
-//   USER_LOGGED_OUT,
-//   CHANGE_ACTIVE_PAGE
-// } from "../../redux/actionTypes";
+import Hamburger from "../Hamburger";
 import "./header.css";
 
 class Header extends Component {
   state = {
-    top: true
+    top: true,
   };
 
   componentDidMount() {
-    window.addEventListener("scroll", () => {
-      let y = window.scrollY;
-      if (y > 20) {
-        if (this.state.top) {
-          // Only set state to false if currently true
-          this.setState({ top: false });
-        }
+    window.addEventListener("scroll", (e) => {
+      if (this.props.menuOpen) {
+        e.preventDefault();
       } else {
-        if (!this.state.top) {
-          this.setState({ top: true });
+        let y = window.scrollY;
+        if (y > 20) {
+          if (this.state.top) {
+            // Only set state to false if currently true
+            this.setState({ top: false });
+          }
+        } else {
+          if (!this.state.top) {
+            this.setState({ top: true });
+          }
         }
       }
     });
@@ -33,6 +31,7 @@ class Header extends Component {
 
   render() {
     let { top } = this.state;
+    let { hamburger, sideMenuToggle, menuOpen } = this.props;
     return (
       <div className={top ? "header" : "header header-fixed"}>
         <div className="container nav-container">
@@ -45,31 +44,42 @@ class Header extends Component {
               </Link>
             </div>
             <nav className="navbar">
-              <NavLink
-                exact
-                to="/"
-                className="navlink"
-                activeClassName="navlink-selected"
-              >
-                Home
-                <div className="navlink-line"></div>
-              </NavLink>
-              <NavLink
-                to="/about"
-                className="navlink"
-                activeClassName="navlink-selected"
-              >
-                About
-                <div className="navlink-line"></div>
-              </NavLink>
-              <NavLink
-                className="navlink"
-                activeClassName="navlink-selected"
-                to="/contact"
-              >
-                Contact
-                <div className="navlink-line"></div>
-              </NavLink>
+              {hamburger ? (
+                <Hamburger
+                  open={menuOpen}
+                  onClick={() => {
+                    sideMenuToggle();
+                  }}
+                />
+              ) : (
+                <>
+                  <NavLink
+                    exact
+                    to="/"
+                    className="navlink"
+                    activeClassName="navlink-selected"
+                  >
+                    Home
+                    <div className="navlink-line"></div>
+                  </NavLink>
+                  <NavLink
+                    to="/game"
+                    className="navlink"
+                    activeClassName="navlink-selected"
+                  >
+                    Game
+                    <div className="navlink-line"></div>
+                  </NavLink>
+                  <NavLink
+                    className="navlink"
+                    activeClassName="navlink-selected"
+                    to="/contact"
+                  >
+                    Contact
+                    <div className="navlink-line"></div>
+                  </NavLink>
+                </>
+              )}
             </nav>
           </div>
         </div>

@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
 
+body {
+  overflow-x: hidden;
+}
 .goblin-text {
   font-family: "A Goblin Appears";
 }
@@ -24,9 +27,31 @@ main > .login-hero {
   align-items: center;
 }
 
+section {
+  width: 100%;
+  height: 100%;
+  /* background-image: url("./assets/images/backgrounds/barn-graduate-1.JPG"); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: right center;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  right: 17px;
+  left: 0;
+  bottom: 0;
+}
+
 .container {
-  width: 85%;
+  width: 90vw;
+  max-width: 1100px;
   margin: 0 auto;
+  height: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .clicker {
