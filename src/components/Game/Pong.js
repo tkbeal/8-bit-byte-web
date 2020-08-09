@@ -148,6 +148,10 @@ class Pong extends React.Component {
             <code>Down</code>
           </li>
         </ul>
+        <h4>
+          This is still a work-in-progress. Might not work well, or at all 😇
+          Play at your own risk!
+        </h4>
       </div>
     );
   }
