@@ -1,18 +1,6 @@
 import React from "react";
-import {
-  GamePage,
-  // LoginPage,
-  // RegisterPage,
-  // AboutPage,
-  // ContactPage
-} from "./components/Page";
 import HomePage from "./components/Page/HomePage";
-import Page404 from "./components/Page/Page404";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
-import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import SideMenu from "./components/SideMenu/SideMenu";
 import "./App.css";
 
 export default class App extends React.Component {
@@ -53,40 +41,12 @@ export default class App extends React.Component {
   render() {
     return (
       <div className={this.state.menuOpen ? "fixed" : ""}>
-        <Router>
-          {this.state.hamburger ? (
-            <SideMenu menuOpen={this.state.menuOpen} />
-          ) : (
-            <></>
-          )}
-          <ScrollToTop />
-          <Header
-            hamburger={this.state.hamburger}
-            menuOpen={this.state.menuOpen}
-            sideMenuToggle={this.sideMenuToggle}
-          />
-          <main>
-            <section id="home">
-              <div className="container">
-                <Switch>
-                  <Route exact path="/">
-                    <HomePage
-                      changeActive={(page) => {}}
-                      clicks={this.state.clicks}
-                    />
-                  </Route>
-                  <Route path="/game">
-                    <GamePage
-                      changeActive={(page) => {}}
-                      clicks={this.state.clicks}
-                    />
-                  </Route>
-                </Switch>
-              </div>
-            </section>
-          </main>
-          <Footer />
-        </Router>
+        <main>
+          <div className="container">
+            <HomePage changeActive={(page) => {}} clicks={this.state.clicks} />
+          </div>
+        </main>
+        <Footer />
       </div>
     );
   }

@@ -12,10 +12,6 @@ code {
     monospace;
 }
 
-p {
-  margin: 5px;
-}
-
 :root {
   --byte-grey: #929292;
   --byte-orange: #f4a41b;
