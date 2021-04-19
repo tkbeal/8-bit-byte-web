@@ -1,26 +1,11 @@
-.hero-container {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.download {
-  margin-top: 15px;
-}
-.download > h4 {
-  margin-bottom: 0;
-}
-
 .download-line {
   width: 0%;
   height: 2px;
-  background-color: rgb(149, 241, 74);
   transition: all 100ms ease;
 }
 
 .download:hover .download-line {
-  width: 138px;
+  width: 100%;
 }
 
 .social-links {

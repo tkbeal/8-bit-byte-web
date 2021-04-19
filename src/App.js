@@ -2,6 +2,7 @@ import React from "react";
 import HomePage from "./components/Page/HomePage";
 import Footer from "./components/Footer";
 import "./App.css";
+import JobTitles from "./components/JobTitles";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -40,14 +41,47 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className={this.state.menuOpen ? "fixed" : ""}>
-        <main>
-          <div className="container">
-            <HomePage changeActive={(page) => {}} clicks={this.state.clicks} />
+      <main style={styles.main}>
+        <div style={styles.hero}>
+          <div style={styles.first}>
+            <JobTitles />
           </div>
-        </main>
-        <Footer />
-      </div>
+          <div style={styles.second}>
+            <HomePage />
+          </div>
+        </div>
+        <footer>
+          <Footer />
+        </footer>
+      </main>
     );
   }
 }
+
+const styles = {
+  main: {
+    position: "relative",
+    flexFlow: "column",
+    display: "flex",
+    maxWidth: 1100,
+  },
+  hero: {
+    display: "flex",
+    flexDirection: "row",
+    height: "100vh",
+  },
+  first: {
+    flex: 1,
+    display: "flex",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    color: "white",
+    marginRight: 50,
+  },
+  second: {
+    flex: 1,
+    display: "flex",
+    alignItems: "center",
+    marginLeft: 30,
+  },
+};

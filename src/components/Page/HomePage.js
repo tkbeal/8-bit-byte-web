@@ -13,12 +13,13 @@ import {
   faTwitter,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
+import { Colors } from "../../utils/Colors";
 
 const DownloadButton = () => (
-  <a href={resume} download="TKB_Resume.pdf" className="download">
-    <h4>
+  <a href={resume} download="TKB_Resume.pdf" style={styles.downloadButton}>
+    <h4 style={styles.downloadText}>
       <FA icon={faFileDownload} size="1x" />
-      &nbsp;&nbsp;Download Resume
+      &nbsp;&nbsp;VIEW RESUME
     </h4>
     <div className="download-line"></div>
   </a>
@@ -59,9 +60,11 @@ const SocialLinks = () => (
 
 const HomePage = () => {
   return (
-    <div className="hero-container">
+    <div style={styles.container}>
       <h1>kevin beal</h1>
-      <h2 style={styles.jobTitle}>swe @snackpass</h2>
+      <h2 style={styles.jobTitle}>
+        swe @ <span style={styles.highlighted}>snackpass</span>
+      </h2>
       <SocialLinks />
       <DownloadButton />
     </div>
@@ -71,8 +74,26 @@ const HomePage = () => {
 export default HomePage;
 
 const styles = {
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+  },
   jobTitle: {
     marginBottom: 20,
     fontWeight: 300,
+  },
+  highlighted: {
+    color: Colors.snackpass,
+  },
+  downloadText: {
+    color: Colors.sesame,
+  },
+  downloadButton: {
+    marginTop: 20,
+    width: 110,
+    backgroundColor: "#00ceff",
+    padding: "8px 12px",
+    borderRadius: 8,
   },
 };
