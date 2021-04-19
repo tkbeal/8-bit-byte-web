@@ -18,8 +18,8 @@ import { Colors } from "../../utils/Colors";
 const DownloadButton = () => (
   <a href={resume} download="TKB_Resume.pdf" style={styles.downloadButton}>
     <h4 style={styles.downloadText}>
-      <FA icon={faFileDownload} size="1x" />
-      &nbsp;&nbsp;VIEW RESUME
+      <FA icon={faFileDownload} size="sm" />
+      &nbsp;&nbsp;view resume
     </h4>
     <div className="download-line"></div>
   </a>
@@ -93,7 +93,8 @@ const styles = {
     marginTop: 20,
     width: 110,
     backgroundColor: "#00ceff",
-    padding: "8px 12px",
+    padding: "5px 10px",
     borderRadius: 8,
+    textAlign: "center",
   },
 };
