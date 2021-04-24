@@ -1,71 +1,42 @@
 import React from "react";
-import HomePage from "./components/Page/HomePage";
+import Hero from "./components/Hero";
 import Footer from "./components/Footer";
-import "./App.css";
 import JobTitles from "./components/JobTitles";
+import About from "./components/About";
+import "./App.css";
+import GoDown from "./components/GoDown";
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      clicks: 0,
-      hamburger: false,
-      menuOpen: false,
-    };
-  }
-
-  componentDidMount() {
-    window.addEventListener("scroll", (e) => {
-      if (this.state.menuOpen) {
-        console.log("app menu open");
-        e.preventDefault();
-      }
-    });
-    // Responsive Listener
-    const mq = window.matchMedia("(max-width: 700px)");
-    this.doWidth(mq);
-    mq.addListener(this.doWidth);
-  }
-
-  doWidth = (media) => {
-    if (media.matches) {
-      this.setState({ hamburger: true, menuOpen: false });
-    } else {
-      this.setState({ hamburger: false, menuOpen: false });
-    }
-  };
-
-  sideMenuToggle = () => {
-    this.setState({ menuOpen: !this.state.menuOpen });
-  };
-
-  render() {
-    return (
-      <main style={styles.main}>
-        <div style={styles.hero}>
-          <div style={styles.first}>
-            <JobTitles />
-          </div>
-          <div style={styles.second}>
-            <HomePage />
-          </div>
+const App = () => {
+  return (
+    <main style={styles.main}>
+      <div style={styles.hero}>
+        <div style={styles.first}>
+          <JobTitles />
         </div>
-        <footer>
-          <Footer />
-        </footer>
-      </main>
-    );
-  }
-}
+        <div style={styles.second}>
+          <Hero />
+        </div>
+      </div>
+      <GoDown />
+      <About />
+      <footer>
+        <Footer />
+      </footer>
+    </main>
+  );
+};
+
+export default App;
 
 const styles = {
   main: {
     position: "relative",
     flexFlow: "column",
     display: "flex",
-    maxWidth: 1100,
+    width: "100%",
   },
   hero: {
+    position: "relative",
     display: "flex",
     flexDirection: "row",
     height: "100vh",
@@ -84,4 +55,5 @@ const styles = {
     alignItems: "center",
     marginLeft: 30,
   },
+  aboutContainer: {},
 };

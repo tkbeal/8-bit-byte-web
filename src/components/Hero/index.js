@@ -58,7 +58,7 @@ const SocialLinks = () => (
   </div>
 );
 
-const HomePage = () => {
+const Hero = () => {
   return (
     <div style={styles.container}>
       <h1>kevin beal</h1>
@@ -71,7 +71,7 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Hero;
 
 const styles = {
   container: {
