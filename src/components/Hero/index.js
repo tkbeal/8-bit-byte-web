@@ -13,7 +13,7 @@ import {
   faTwitter,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
-import { Colors } from "../../utils/Colors";
+import { Colors } from "../../utils/colors";
 
 const DownloadButton = () => (
   <a href={resume} download="TKB_Resume.pdf" style={styles.downloadButton}>

@@ -73,13 +73,14 @@ const styles = {
   },
   placesRow: {
     display: "flex",
+    justifyContent: "center",
     maxWidth: 500,
     marginTop: 20,
+    gap: 24,
   },
   logo: {
     width: LOGO_SIZE,
     height: LOGO_SIZE,
     borderRadius: 50,
-    marginRight: 50,
   },
 };

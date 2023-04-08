@@ -9,7 +9,7 @@ import GoDown from "./components/GoDown";
 const App = () => {
   return (
     <main style={styles.main}>
-      <div style={styles.hero}>
+      <div className="hero">
         <div style={styles.first}>
           <JobTitles />
         </div>
@@ -31,29 +31,19 @@ export default App;
 const styles = {
   main: {
     position: "relative",
-    flexFlow: "column",
+    flexFlow: "column nowrap",
     display: "flex",
-    width: "100%",
-  },
-  hero: {
-    position: "relative",
-    display: "flex",
-    flexDirection: "row",
-    height: "100vh",
   },
   first: {
-    flex: 1,
     display: "flex",
     justifyContent: "flex-end",
     alignItems: "center",
     color: "white",
-    marginRight: 50,
+    paddingRight: 50,
   },
   second: {
-    flex: 1,
     display: "flex",
     alignItems: "center",
-    marginLeft: 30,
   },
   aboutContainer: {},
 };
