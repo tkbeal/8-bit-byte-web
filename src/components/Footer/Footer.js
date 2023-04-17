@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="footer">
       <div style={{ margin: "auto" }}>
         <p style={{ marginTop: 20, color: "whitesmoke", fontFamily: "Oswald" }}>
-          &copy; Copyright 2021 Kevin Beal
+          &copy; Copyright 2023 Kevin Beal
         </p>
       </div>
     </div>
