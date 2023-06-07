@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import snackpassLogo from "../../assets/images/snackpass-logo.png";
 import marylandLogo from "../../assets/images/maryland-logo.gif";
 import targetLogo from "../../assets/images/target-logo.png";
@@ -11,9 +11,12 @@ const About = () => {
       <div style={styles.innerContainer}>
         <h2 style={{ marginBottom: 20 }}>about me</h2>
         <p style={styles.descriptionText}>
-          I graduated in 2020 from the University of Maryland with a BS in
-          Computer Science. My technical interests include web and mobile full
-          stack work and basically everything JS related.
+          {`In 2020, I graduated with a Bachelors of Science in Computer Science
+          from the University of Maryland. Go terps! Post graduation, I
+          immediately started a full-time role at a series C startup called
+          Snackpass where I have continued to develop my skills as a full-stack
+          engineer. Over the last 3 years, I\'ve grown to love React and React
+          Native web and mobile app development, be more comfortable with the back end and general server architecture, and be curious about everything in the land of JavaScript.`}
         </p>
       </div>
       <div style={styles.rowContainer}>
@@ -48,7 +51,7 @@ const About = () => {
 
 export default About;
 
-const styles = {
+const styles: { [key: string]: CSSProperties } = {
   aboutContainer: {
     display: "flex",
     flexDirection: "column",
