@@ -8,9 +8,7 @@ export const Hero = () => {
   return (
     <Container>
       <Name>kevin beal</Name>
-      <JobTitle>
-        swe @ <span style={{ color: Colors.snackpass }}>snackpass</span>
-      </JobTitle>
+      <JobTitle>software engineer</JobTitle>
       <SocialLinks />
       <DownloadButton />
     </Container>
@@ -37,5 +35,6 @@ const Name = styled.h1`
 
 const JobTitle = styled.h2`
   font-weight: 300;
+  color: ${Colors.snackpass};
   line-height: 36px;
 `;
