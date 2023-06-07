@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { FontAwesomeIcon as FA } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { Colors } from "../../utils/colors";
@@ -25,5 +25,5 @@ const styles = {
     top: -75,
     display: "flex",
     justifyContent: "center",
-  },
+  } as CSSProperties,
 };
