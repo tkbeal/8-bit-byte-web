@@ -1,17 +1,18 @@
 import React, { CSSProperties } from "react";
-import Footer from "./components/Footer";
-import { JobTitles } from "./components/JobTitles";
-import About from "./components/About";
+import { Footer } from "./components/Footer";
+import { HobbyLinks } from "./components/HobbyLinks";
+import { About } from "./components/About";
 import "./App.css";
-import GoDown from "./components/GoDown";
+import { GoDown } from "./components/GoDown";
 import { styled } from "styled-components";
 import { Hero } from "./components/Hero";
+import { Constants } from "./utils";
 
 const App = () => {
   return (
     <main style={styles.main}>
       <HeroContainer>
-        <JobTitles />
+        <HobbyLinks />
         <Hero />
       </HeroContainer>
       <GoDown />
@@ -51,7 +52,7 @@ const HeroContainer = styled.div`
   align-items: center;
   height: 100vh;
   gap: 40px;
-  @media (min-width: 420px) {
+  @media (${Constants.MOBILE_WIDTH}) {
     flex-direction: row;
     gap: 80px;
   }

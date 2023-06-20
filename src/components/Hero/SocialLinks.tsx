@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon as FA } from "@fortawesome/react-fontawesome";
+import { Constants, Colors } from "../../utils";
 
 // Icons
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { Colors } from "../../utils/colors";
 
 export const SocialLinks = () => (
   <Container>
@@ -30,6 +30,10 @@ const Container = styled.div`
   gap: 16px;
   align-items: center;
   width: 180px;
+  justify-content: center;
+  @media (${Constants.MOBILE_WIDTH}) {
+    justify-content: start;
+  }
 `;
 
 const SocialLink = styled.a`

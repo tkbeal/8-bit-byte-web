@@ -2,8 +2,9 @@ import React from "react";
 import { FontAwesomeIcon as FA } from "@fortawesome/react-fontawesome";
 import { faCoffee, faCode, faGamepad } from "@fortawesome/free-solid-svg-icons";
 import { styled } from "styled-components";
+import { Constants } from "../../utils";
 
-export const JobTitles = () => (
+export const HobbyLinks = () => (
   <Container>
     <a href="https://github.com/tkbeal" target="__blank">
       <Title>
@@ -30,7 +31,7 @@ const Container = styled.div`
   width: 100%;
   flex-direction: column;
   align-items: center;
-  @media (min-width: 420px) {
+  @media (${Constants.MOBILE_WIDTH}) {
     align-items: end;
   }
 `;
