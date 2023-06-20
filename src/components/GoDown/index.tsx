@@ -1,29 +1,40 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 import { FontAwesomeIcon as FA } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { Colors } from "../../utils/colors";
-import "./down.css";
+import { Colors } from "../../utils";
+import styled from "styled-components";
 
-const GoDown = () => (
-  <div style={styles.downContainer}>
+export const GoDown = () => (
+  <Container>
     <a href="#about">
-      <FA
-        icon={faChevronDown}
-        size="3x"
-        color={Colors.whitesmoke}
-        id="chevron-down"
-      />
+      <ChevronDown icon={faChevronDown} size="3x" color={Colors.whitesmoke} />
     </a>
-  </div>
+  </Container>
 );
 
-export default GoDown;
+const Container = styled.div`
+  position: relative;
+  top: -75px;
+  display: flex;
+  justify-content: center;
+`;
 
-const styles = {
-  downContainer: {
-    position: "relative",
-    top: -75,
-    display: "flex",
-    justifyContent: "center",
-  } as CSSProperties,
-};
+const ChevronDown = styled(FA)`
+  position: relative;
+  animation-name: chevron-bounce;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+
+  @keyframes chevron-bounce {
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: 10px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+`;

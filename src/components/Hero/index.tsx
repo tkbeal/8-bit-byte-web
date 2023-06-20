@@ -1,5 +1,5 @@
 import React from "react";
-import { Colors } from "../../utils/colors";
+import { Colors, Constants } from "../../utils";
 import { styled } from "styled-components";
 import { SocialLinks } from "./SocialLinks";
 import { DownloadButton } from "./DownloadButton";
@@ -23,7 +23,7 @@ const Container = styled.div`
   justify-content: end;
   align-items: center;
   gap: 16px;
-  @media (min-width: 420px) {
+  @media (${Constants.MOBILE_WIDTH}) {
     align-items: start;
   }
 `;
