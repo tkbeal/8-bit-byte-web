@@ -1,6 +1,6 @@
-import snackpassLogo from "../../assets/images/snackpass-logo.png";
-import marylandLogo from "../../assets/images/maryland-logo.gif";
-import targetLogo from "../../assets/images/target-logo.png";
+import snackpassLogo from "../../../assets/images/snackpass-logo.png";
+import marylandLogo from "../../../assets/images/maryland-logo.gif";
+import targetLogo from "../../../assets/images/target-logo.png";
 
 type Job = {
   title: string;

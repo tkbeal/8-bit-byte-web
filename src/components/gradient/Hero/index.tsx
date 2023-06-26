@@ -1,19 +1,17 @@
 import React from "react";
-import { Colors, Constants } from "../../utils";
+import { Colors, Constants } from "../../../utils";
 import { styled } from "styled-components";
 import { SocialLinks } from "./SocialLinks";
 import { DownloadButton } from "./DownloadButton";
 
-export const Hero = () => {
-  return (
-    <Container>
-      <Name>kevin beal</Name>
-      <JobTitle>software engineer</JobTitle>
-      <SocialLinks />
-      <DownloadButton />
-    </Container>
-  );
-};
+export const Hero = () => (
+  <Container>
+    <Name>kevin beal</Name>
+    <JobTitle>software engineer</JobTitle>
+    <SocialLinks />
+    <DownloadButton />
+  </Container>
+);
 
 const Container = styled.div`
   flex: 1;

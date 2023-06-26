@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon as FA } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { Colors } from "../../utils";
+import { Colors } from "../../../utils";
 import styled from "styled-components";
 
 export const GoDown = () => (
@@ -14,7 +14,7 @@ export const GoDown = () => (
 
 const Container = styled.div`
   position: relative;
-  top: -75px;
+  top: -100px;
   display: flex;
   justify-content: center;
 `;

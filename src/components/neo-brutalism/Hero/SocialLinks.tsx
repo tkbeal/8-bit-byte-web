@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon as FA } from "@fortawesome/react-fontawesome";
-import { Constants, Colors } from "../../utils";
+import { Constants, Colors } from "../../../utils";
 
 // Icons
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export const SocialLinks = () => (
   <Container>
@@ -20,7 +20,7 @@ export const SocialLinks = () => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      <FA icon={faLinkedinIn} size="2x" />
+      <FA icon={faLinkedin} size="2xl" />
     </SocialLink>
   </Container>
 );
@@ -31,11 +31,8 @@ const Container = styled.div`
   align-items: center;
   width: 180px;
   justify-content: center;
-  @media (${Constants.MOBILE_WIDTH}) {
-    justify-content: start;
-  }
 `;
 
 const SocialLink = styled.a`
-  color: ${Colors.whitesmoke};
+  color: black;
 `;
