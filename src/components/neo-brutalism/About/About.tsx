@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { JobRow } from "./JobRow";
 import { Jobs } from "./jobs";
-import { Colors } from "../../../utils";
+import { Colors, Constants } from "../../../utils";
 
 export const BrutalAbout = () => {
   return (
@@ -50,9 +50,12 @@ const JobsColumn = styled.div`
   margin-top: 100px;
   gap: 24px;
   background-color: ${Colors.neo_blue10};
-  padding: 32px 90px;
+  padding: 32px;
   border: 3px solid black;
   border-radius: 12px;
+  @media (${Constants.MOBILE_WIDTH}) {
+    padding: 32px 90px;
+  }
 `;
 
 const JobsTitle = styled.p`

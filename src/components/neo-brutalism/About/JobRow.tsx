@@ -45,6 +45,7 @@ const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
+  text-align: left;
   gap: 4px;
 `;
 
@@ -63,4 +64,5 @@ const Title = styled.p`
 const Description = styled.p`
   color: black;
   font-family: "Archivo", sans-serif;
+  line-height: 20px;
 `;

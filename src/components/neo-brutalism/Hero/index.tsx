@@ -35,7 +35,9 @@ const NameTagContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px;
+  width: 90vw;
+  max-width: 500px;
+  text-align: center;
 `;
 
 const BottomContainer = styled.div`

@@ -8,38 +8,6 @@ body {
   overflow-x: hidden;
 }
 
-.fixed {
-  position: fixed;
-  top: 0;
-  right: 17px;
-  left: 0;
-  bottom: 0;
-}
-
-.clicker {
-  position: relative;
-  background-color: yellowgreen;
-  border: none;
-  padding: 0.5rem 20px;
-  margin: 1rem 0px;
-  border-radius: 20px;
-  box-shadow: 0px 4px rgb(57, 77, 18);
-  min-width: 120px;
-  outline: none;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: normal;
-  font-family: "Oswald", "sans-serif";
-}
-.clicker:hover {
-  cursor: pointer;
-  background-color: rgb(125, 165, 45);
-}
-.clicker:active {
-  transform: translateY(3px);
-  box-shadow: 0px 2px rgb(57, 77, 18);
-}
-
 /* Default Styles */
 h1,
 h2,

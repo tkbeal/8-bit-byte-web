@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { styled } from "styled-components";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { Colors } from "../../../utils";
+import { Colors, Constants } from "../../../utils";
 
 type LinkProps = {
   title: string;
@@ -51,9 +51,14 @@ export const BrutalHobbyLinks = () => (
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
+  gap: 16px;
   width: 110%;
   align-items: center;
   justify-content: space-between;
+  @media (${Constants.MOBILE_WIDTH}) {
+    flex-direction: row;
+  }
 `;
 
 const StyledLink = styled.a`
