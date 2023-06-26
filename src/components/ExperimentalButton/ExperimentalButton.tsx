@@ -25,13 +25,24 @@ export const ExperimentalButton = () => {
   };
 
   return (
-    <ThemeButton theme={theme} onClick={() => toggleTheme(theme)}>
+    <ThemeButton
+      style={
+        theme === Theme.neobrutalism
+          ? {
+              backgroundColor: "white",
+              border: "2px solid black",
+              borderRadius: 4,
+            }
+          : { backgroundColor: "transparent" }
+      }
+      onClick={() => toggleTheme(theme)}
+    >
       <FA icon={faFlask} size={"2x"} color={getColor(theme)} />
     </ThemeButton>
   );
 };
 
-const ThemeButton = styled.button<{ theme: Theme }>`
+const ThemeButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,11 +53,6 @@ const ThemeButton = styled.button<{ theme: Theme }>`
   aspect-ratio: 1;
   border: none;
   z-index: 10;
-  background-color: transparent;
-
-  ${({ theme }) =>
-    theme === Theme.neobrutalism &&
-    `border: 2px solid black; border-radius: 4px; background-color: white;`}
 
   &:hover {
     cursor: pointer;
