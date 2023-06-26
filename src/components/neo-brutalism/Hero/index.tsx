@@ -2,6 +2,7 @@ import React from "react";
 import { styled } from "styled-components";
 import { SocialLinks } from "./SocialLinks";
 import { DownloadButton } from "./DownloadButton";
+import { BrutalHobbyLinks } from "../HobbyLinks";
 
 export const BrutalHero = () => (
   <Container>
@@ -14,6 +15,7 @@ export const BrutalHero = () => (
       <SocialLinks />
       <DownloadButton />
     </BottomContainer>
+    <BrutalHobbyLinks />
   </Container>
 );
 
@@ -21,7 +23,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 450px;
+  width: 500px;
 `;
 const BottomContainer = styled.div`
   display: flex;

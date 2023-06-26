@@ -25,7 +25,7 @@ const DownloadResumeButton = styled.a`
   color: ${Colors.sesame};
   font-size: 1.1rem;
   border: 2px solid black;
-  margin-top: 8px;
+  margin-top: 16px;
   box-shadow: 1px 2px 0 black;
 `;
 
