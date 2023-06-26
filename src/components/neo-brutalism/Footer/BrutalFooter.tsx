@@ -1,17 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Footer = () => {
+export const BrutalFooter = () => {
   return (
     <Container>
       <div style={{ margin: "auto" }}>
-        <p style={{ marginTop: 20, color: "whitesmoke", fontFamily: "Oswald" }}>
-          &copy; Copyright 2023 Kevin Beal
-        </p>
+        <Copyright>&copy; Copyright 2020 - 2023 Kevin Beal</Copyright>
       </div>
     </Container>
   );
 };
+
+const Copyright = styled.p`
+  font-family: "Archivo", sans-serif;
+  color: black;
+`;
 
 const Container = styled.div`
   height: max(10vh, 100px);
