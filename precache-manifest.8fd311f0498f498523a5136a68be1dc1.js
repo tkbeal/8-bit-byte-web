@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0e8937ab7cdaee2b81c34014a48afbd3",
+    "revision": "30f04d9ac04cf59502a76df6e0d8d1bb",
     "url": "/index.html"
   },
   {
-    "revision": "0fa78952fcf4433acde6",
-    "url": "/static/css/main.9c8ffa15.chunk.css"
+    "revision": "b0f2f43fad4e6fee6b98",
+    "url": "/static/css/main.bea82e39.chunk.css"
   },
   {
-    "revision": "754e12ffa9d0f2269fe6",
-    "url": "/static/js/2.08e5cb1f.chunk.js"
+    "revision": "fdedec376ad97fd882b7",
+    "url": "/static/js/2.6c38e92f.chunk.js"
   },
   {
-    "revision": "9c58c99a8df009c2dd446c527172a001",
-    "url": "/static/js/2.08e5cb1f.chunk.js.LICENSE.txt"
+    "revision": "ba597ef14a0326bb25bca25d9a267443",
+    "url": "/static/js/2.6c38e92f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0fa78952fcf4433acde6",
-    "url": "/static/js/main.37c8ef28.chunk.js"
+    "revision": "b0f2f43fad4e6fee6b98",
+    "url": "/static/js/main.ee939b63.chunk.js"
   },
   {
     "revision": "d1ac818e32ae5c1f245c",
     "url": "/static/js/runtime-main.4196ce08.js"
   },
   {
-    "revision": "4c9c1f1eacb853bf7062a2ac246d7d19",
-    "url": "/static/media/A Goblin Appears.4c9c1f1e.otf"
+    "revision": "29ae2430a8ae58829e8f7a4707a5290a",
+    "url": "/static/media/Archivo-Bold.29ae2430.ttf"
   },
   {
     "revision": "39cd36f3e3215f78b22b143d892ddde2",
