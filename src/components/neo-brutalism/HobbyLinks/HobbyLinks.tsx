@@ -19,7 +19,7 @@ type LinkProps = {
 
 const HobbyLink = ({ title, icon, link, color }: LinkProps) => {
   return (
-    <StyledLink href={link || ""} target="__blank">
+    <StyledLink href={link || "#"} target={link ? "__blank" : "__self"}>
       <BackgroundColor>&nbsp;</BackgroundColor>
       <OffsetColor color={color}>&nbsp;</OffsetColor>
       <Title>
@@ -50,12 +50,10 @@ export const BrutalHobbyLinks = () => (
 );
 
 const Container = styled.div`
-  flex: 1;
   display: flex;
   width: 110%;
   align-items: center;
   justify-content: space-between;
-  margin-top: 16px;
 `;
 
 const StyledLink = styled.a`

@@ -4,17 +4,17 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { Colors } from "../../../utils";
 import styled from "styled-components";
 
-export const GoDown = () => (
+export const BrutalDown = () => (
   <Container>
     <a href="#about">
-      <ChevronDown icon={faChevronDown} size="3x" color={Colors.whitesmoke} />
+      <ChevronDown icon={faChevronDown} size="3x" color={Colors.black} />
     </a>
   </Container>
 );
 
 const Container = styled.div`
   position: relative;
-  top: -75px;
+  top: -100px;
   display: flex;
   justify-content: center;
 `;

@@ -14,7 +14,7 @@ export const GoDown = () => (
 
 const Container = styled.div`
   position: relative;
-  top: -75px;
+  top: -100px;
   display: flex;
   justify-content: center;
 `;

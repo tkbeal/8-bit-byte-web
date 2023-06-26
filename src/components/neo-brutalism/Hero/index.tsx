@@ -6,25 +6,38 @@ import { BrutalHobbyLinks } from "../HobbyLinks";
 
 export const BrutalHero = () => (
   <Container>
-    <HelloContainer>
-      <HelloMyNameIs>HELLO, my name is</HelloMyNameIs>
-    </HelloContainer>
-    <BottomContainer>
-      <Name>Kevin Beal</Name>
-      <JobTitle>I am a software engineer</JobTitle>
-      <SocialLinks />
-      <DownloadButton />
-    </BottomContainer>
+    <NameTagContainer>
+      <HelloContainer>
+        <HelloMyNameIs>HELLO, my name is</HelloMyNameIs>
+      </HelloContainer>
+      <BottomContainer>
+        <Name>Kevin Beal</Name>
+        <JobTitle>I am a software engineer</JobTitle>
+        <SocialLinks />
+        <DownloadButton />
+      </BottomContainer>
+    </NameTagContainer>
     <BrutalHobbyLinks />
   </Container>
 );
 
 const Container = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  height: 100vh;
+`;
+
+const NameTagContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 500px;
 `;
+
 const BottomContainer = styled.div`
   display: flex;
   width: 100%;

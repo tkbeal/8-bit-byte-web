@@ -4,7 +4,7 @@ import { FontAwesomeIcon as FA } from "@fortawesome/react-fontawesome";
 import { Constants, Colors } from "../../../utils";
 
 // Icons
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export const SocialLinks = () => (
   <Container>
@@ -20,7 +20,7 @@ export const SocialLinks = () => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      <FA icon={faLinkedinIn} size="2x" />
+      <FA icon={faLinkedin} size="2xl" />
     </SocialLink>
   </Container>
 );

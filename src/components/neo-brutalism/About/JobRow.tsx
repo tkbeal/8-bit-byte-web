@@ -15,10 +15,10 @@ export const JobRow = ({ logo, title, description }: JobRowProps) => {
       <ImageContainer>
         <Logo src={logo} />
       </ImageContainer>
-      <Description>
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </Description>
+      <DescriptionContainer>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
+      </DescriptionContainer>
     </Row>
   );
 };
@@ -26,24 +26,41 @@ export const JobRow = ({ logo, title, description }: JobRowProps) => {
 const Row = styled.div`
   display: flex;
   justify-content: start;
+  align-items: center;
   max-width: 500px;
   gap: 24px;
 `;
 
 const ImageContainer = styled.div`
   width: ${LOGO_SIZE + 4}px;
+  aspect-ratio: 1;
   display: flex;
   align-items: center;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 2px;
 `;
 
-const Description = styled.div`
+const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
+  gap: 4px;
 `;
 
 const Logo = styled.img`
   width: ${LOGO_SIZE}px;
   height: ${LOGO_SIZE}px;
   border-radius: 50%;
+`;
+
+const Title = styled.p`
+  color: black;
+  font-family: "Archivo", sans-serif;
+  font-size: 24px;
+`;
+
+const Description = styled.p`
+  color: black;
+  font-family: "Archivo", sans-serif;
 `;

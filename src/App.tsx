@@ -13,6 +13,8 @@ import { Theme } from "./global_state/theme";
 import { useTheme } from "./global_state/hooks";
 import { BrutalFooter } from "./components/neo-brutalism/Footer/BrutalFooter";
 import { BrutalHero } from "./components/neo-brutalism/Hero";
+import { BrutalDown } from "./components/neo-brutalism/GoDown";
+import { BrutalAbout } from "./components/neo-brutalism/About";
 
 const GradientComponents = () => (
   <GradientMain>
@@ -29,6 +31,8 @@ const GradientComponents = () => (
 const NeoBrutalComponents = () => (
   <BrutalMain>
     <BrutalHero />
+    <BrutalDown />
+    <BrutalAbout />
     <BrutalFooter />
   </BrutalMain>
 );

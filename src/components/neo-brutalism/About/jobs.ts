@@ -1,6 +1,6 @@
-import snackpassLogo from "../../assets/images/snackpass-logo.png";
-import marylandLogo from "../../assets/images/maryland-logo.gif";
-import targetLogo from "../../assets/images/target-logo.png";
+import snackpassLogo from "../../../assets/images/snackpass-logo.png";
+import marylandLogo from "../../../assets/images/maryland-logo.gif";
+import targetLogo from "../../../assets/images/target-logo.png";
 
 type Job = {
   title: string;
@@ -10,18 +10,18 @@ type Job = {
 
 export const Jobs: Array<Job> = [
   {
-    title: "snackpass",
-    description: "software engineer, august 2020 - june 2023",
+    title: "Snackpass",
+    description: "Software Engineer, August 2020 - June 2023",
     logo: snackpassLogo,
   },
   {
-    title: "target",
-    description: "software engineering intern, summer 2019",
+    title: "Target Inc.",
+    description: "Software Engineering Intern, Summer 2019",
     logo: targetLogo,
   },
   {
-    title: "university of maryland",
-    description: "teaching assistant, august 2019 - july 2020",
+    title: "University of Maryland",
+    description: "Teaching Assistant, August 2019 - July 2020",
     logo: marylandLogo,
   },
 ];
