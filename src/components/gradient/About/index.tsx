@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 import styled from "styled-components";
 import { JobRow } from "./JobRow";
 import { Jobs } from "./jobs";
@@ -19,8 +19,9 @@ export const About = () => {
       </BioContainer>
       <JobsColumn>
         <h2>places i've worked</h2>
-        {Jobs.map((job) => (
+        {Jobs.map((job, n) => (
           <JobRow
+            key={n}
             logo={job.logo}
             title={job.title}
             description={job.description}

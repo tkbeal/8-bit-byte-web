@@ -2,10 +2,10 @@ import React from "react";
 import { FontAwesomeIcon as FA } from "@fortawesome/react-fontawesome";
 import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
-import { Colors } from "../../utils";
+import { Colors } from "../../../utils";
 
 // Resume PDF
-const resume = require("../../assets/resume.pdf");
+const resume = require("../../../assets/resume.pdf");
 
 export const DownloadButton = () => (
   <DownloadResumeButton href={resume} download="TKB_Resume.pdf">

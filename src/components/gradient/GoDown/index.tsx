@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon as FA } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { Colors } from "../../utils";
+import { Colors } from "../../../utils";
 import styled from "styled-components";
 
 export const GoDown = () => (

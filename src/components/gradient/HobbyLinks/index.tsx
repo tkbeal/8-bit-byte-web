@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon as FA } from "@fortawesome/react-fontawesome";
 import { faCoffee, faCode, faGamepad } from "@fortawesome/free-solid-svg-icons";
 import { styled } from "styled-components";
-import { Constants } from "../../utils";
+import { Constants } from "../../../utils";
 
 export const HobbyLinks = () => (
   <Container>

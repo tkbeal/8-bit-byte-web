@@ -8,12 +8,6 @@ body {
   overflow-x: hidden;
 }
 
-main {
-  background: linear-gradient(45deg, #000 0%, #111d38 100%);
-  background-color: #000;
-  padding: 18px;
-}
-
 .fixed {
   position: fixed;
   top: 0;
@@ -58,9 +52,6 @@ p {
   color: whitesmoke;
   margin: 0;
 }
-p {
-  font-family: "Arial";
-}
 h1 {
   font-size: 4rem;
 }
@@ -75,6 +66,6 @@ a {
 }
 
 @font-face {
-  font-family: "A Goblin Appears";
-  src: local("A Goblin Appears"), url("assets/fonts/A\ Goblin\ Appears.otf");
+  font-family: "Archivo";
+  src: local("Archivo-Bold"), url("assets/fonts/Archivo-Bold.ttf");
 }
